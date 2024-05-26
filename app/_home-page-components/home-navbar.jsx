@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { FloatingNav } from "@/components/aceternity-ui/floating-navbar";
 export function FloatingNavBar() {
+  const [isMounted, setisMounted] = useState(false);
+
   const navItems = [
     {
       name: "Home",
@@ -22,6 +24,15 @@ export function FloatingNavBar() {
       ),
     },
   ];
+
+  useEffect(() => {
+    setisMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+  
   return (
     <div className="fixed top-0  w-full">
       <FloatingNav navItems={navItems} />

@@ -4,13 +4,7 @@ import { useEffect, useState } from "react";
 
 export function TypewriterEffectDemo() {
   const [isMounted, setisMounted] = useState(false);
-  useEffect(() => {
-    setisMounted(true);
-  });
 
-  if (!isMounted) {
-    return null;
-  }
   const words = [
     {
       text: "Hover",
@@ -25,6 +19,15 @@ export function TypewriterEffectDemo() {
       className: "text-white dark:text-white",
     },
   ];
+
+  useEffect(() => {
+    setisMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col items-center justify-center ">
       <TypewriterEffect words={words} />
