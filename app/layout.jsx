@@ -3,14 +3,24 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { FloatingNavBar } from "./_home-page-components/home-navbar";
 import { HomePagePopOver } from "./_home-page-components/home-page-popover";
+import { siteConfig } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Makaveli Softwares",
-  description: "Software Engineering Portfolio",
-  keywords:["omar maulid","software engineer","portfolio","kenya software engineer","safaricom"]
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: [
+    {
+      url: "/logo-profile.jpg",
+      href: "/logo-profile.jpg",
+    },
+  ],
 };
+
 
 export default function RootLayout({ children }) {
   return (
