@@ -3,7 +3,7 @@ import { HomePageAvatar } from './_home-page-components/home-page-avatar'
 
 export default function Home() {
   return (
-    <div>
+    <div className='w-[400px]'>
       <HomePageAvatar/>
     </div>
   )

@@ -12,17 +12,17 @@ export function FloatingNavBar() {
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
-      link: "/about",
+      name: "Blog",
+      link: "/blog",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
-    {
-      name: "Contact",
-      link: "/contact",
-      icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
-    },
+    // {
+    //   name: "Contact",
+    //   link: "/contact",
+    //   icon: (
+    //     <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+    //   ),
+    // },
   ];
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export function FloatingNavBar() {
   }
   
   return (
-    <div className="fixed top-0  w-full">
+    <div className="fixed top-0 z-50  w-full">
       <FloatingNav navItems={navItems} />
     </div>
   );

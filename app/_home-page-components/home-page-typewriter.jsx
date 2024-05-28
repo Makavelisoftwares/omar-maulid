@@ -7,16 +7,8 @@ export function TypewriterEffectDemo() {
 
   const words = [
     {
-      text: "Hover",
-      className: "text-white dark:text-white",
-    },
-    {
-      text: "Me",
-      className: "text-white dark:text-white",
-    },
-    {
-      text: "..",
-      className: "text-white dark:text-white",
+      text: "Hello! I’m Omar Maulid, a passionate Software Engineer with over 3 years of hands-on experience in crafting innovative software solutions. My journey in software development has equipped me with a diverse skill set, enabling me to turn complex problems into seamless digital experiences.",
+      className: "text-black text-nowrap text-sm dark:text-black",
     },
   ];
 
@@ -29,7 +21,7 @@ export function TypewriterEffectDemo() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center  justify-center ">
       <TypewriterEffect words={words} />
     </div>
   );
